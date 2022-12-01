@@ -1,0 +1,132 @@
+p {
+  font-weight: 900;
+  font-style: italic;
+  font-size: 0.75rem;
+
+}
+
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(45deg, #845ec2,#d65db1,
+  #ff6f91,
+  #ff9671,
+  #ffc75f,
+  #f9f871);
+  background-size: 250%;
+  animation: bg-anim 2.5s infinite alternate;
+}
+.bubble-container {
+  position: relative;
+  display: flex;
+  align-self: flex-start;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+
+
+  min-height: 40px;
+  min-width: 250px;
+  width: 50%;
+  overflow: hidden;
+
+  border-radius: 20px;
+  border-style: solid;
+  border-color:  #ee6352;
+  border-width: 2px;
+  box-shadow:  5px 5px;
+  
+  color: #ee6352;
+}
+.input {
+  width: 80%;
+  height: 100%;
+
+  text-transform: uppercase;
+  font-weight: 900;
+  font-style: italic;
+  font-size:calc(10px + 0.5vw);
+
+  color: #ee6352;
+  line-height: .8;
+  border: 0;
+
+  outline: none;
+}
+.input:hover::placeholder{
+  background-position: left;
+}
+.input::placeholder{
+  background-image: linear-gradient(45deg, #845ec2,#d65db1,
+  #ff6f91,
+  #ff9671,
+  #ffc75f,
+  #f9f871);
+  background-clip: text;
+  background-position: right;
+  background-size: 300%;
+  color: transparent;
+  transition: background-position 1s;
+}
+.input:not(:placeholder-shown) {
+  width: 80%;
+  height: 100%;
+
+  text-transform: uppercase;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1.2rem;
+
+  color: black;
+  line-height: .8;
+  border: 0;
+
+  outline: none;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 400px;
+  min-width: 270px;
+  width: 50%;
+  margin-top: 1%;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow:  5px 5px;
+  z-index: 1;
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 2rem;
+  color: #ee6352;
+  line-height: .8;
+  margin: 0;
+}
+
+
+
+@keyframes bg-anim {
+  0%{
+    background-position: left;
+  }
+  100%{
+    background-position: right;
+  }
+}
