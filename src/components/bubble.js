@@ -13,7 +13,7 @@ function Bubble({idBubble, onBubbleClick}) {
     const bubbleXPosition = getRandomInt(0, 100);
     
     const bubbleXString = bubbleXPosition.toString() + 'vw';
-    console.log(bubbleXString);
+    //console.log(bubbleXString);
 
     useTimeout(() => {
         onBubbleClick(idBubble);
